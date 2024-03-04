@@ -20,4 +20,5 @@ let married = true
 //     married == true ? console.log('Mrs.' + name) : console.log('Ms.' + name);
 
 // console.log((gender == true ? 'Mr.' : married == true ? 'Mrs' : 'Ms.') + name);
-console.log(`${gender == true ? 'Mr' : married == true ? 'Mrs' : 'Ms'}. ${name}`);
+// console.log(`${gender == true ? 'Mr' : married == true ? 'Mrs' : 'Ms'}. ${name}`);
+console.log(`${gender ? 'Mr' : married ? 'Mrs' : 'Ms'}. ${name}`);
