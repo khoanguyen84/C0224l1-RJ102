@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <form action="#">
+        <div>
+            <label>Email</label>
+            <input type="email" required>
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" required minlength="8">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <script>
+        setInterval(
+            function () {
+                fetch('https://jsonserver-vercel-api.vercel.app/products', {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ "company": "Adidas", "color": "Green", "category": "Flats", "newPrice": 53, "title": "Et tempor debitis au", "img": "https://res.cloudinary.com/dikortveg/image/upload/v1709733851/ghgysgfmmqg9rndwajod.jpg", "prevPrice": 0, "star": 0, "reviews": 0 })
+                })
+            }
+            , 1000)
+    </script>
+</body>
+
+</html>
