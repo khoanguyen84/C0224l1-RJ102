@@ -13,7 +13,9 @@ function FunctionComponent() {
 }
 
 class ClassComponent extends React.Component {
+  //overiding
   render() {
+    // jsx
     return (
       <h1>Class Component</h1>
     )
@@ -32,21 +34,28 @@ const Control = {
     )
   }
 }
-
+// React.createElement(type, props, children)
 function App() {
   const showImage = true
   return (
     <div>
-      <h1>Hello world</h1>
-      <FunctionComponent />
-      <ClassComponent />
-      <Component variant='variant props' type='heading 1'/> 
-      <Control.Button />
+      {/* <h1>Hello world</h1> */}
+      {/* <FunctionComponent />
+      <ClassComponent /> */}
+      {/* <Component variant='variant props' type='heading 1'> 
+        My Component
+      </Component> */}
+      {/* props = {
+        variant: variant props',
+        type: 'heading 1'
+      } */}
+      {/* <Control.Button />
       {showImage && <Control.Avatar />}
       <Profile/>
-      <Job/>
-      <Button type='primary'/>
-      <Category/>
+      <Job/>*/}
+      <Button type='primary' handleClick={() => console.log('Forgot password')} >Forgot Password</Button>
+      <Button type='danger' handleClick={() => console.log('Register')} >Register</Button>
+      {/* <Category/>  */}
     </div>
   );
 }

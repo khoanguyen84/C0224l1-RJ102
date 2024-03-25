@@ -1,12 +1,29 @@
 import React from "react"
-function Component(props) {
-    console.log(props);
-    return (
-        <>
-            <h1>Heading 1 - {props.variant}</h1>
-            <h2>Heading 2 - {props.type}</h2>
-        </>
-    )
+
+// function Component(props) {
+//     console.log(props);
+//     return (
+//         <>
+//             <h1>Heading 1 - {props.variant}</h1>
+//             <h2>Heading 2 - {props.type}</h2>
+//         </>
+//     )
+// }
+
+class Component extends React.Component {
+    constructor(props){
+        super(props)
+    }
+    render() {
+        console.log(this.props);
+        return (
+            <>
+                <h1>Children: {this.props.children}</h1>
+                <h1>Heading 1 - {this.props.variant}</h1>
+                <h2>Heading 2 - {this.props.type}</h2>
+            </>
+        )
+    }
 }
 
 export default Component
