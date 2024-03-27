@@ -1,6 +1,7 @@
 import { Component } from "react"
 import Content from "./components/content"
 import JsonPlaceHolder from "./components/JsonPlaceHolder"
+import SmartPhone from "./components/SmartPhone"
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <SmartPhone/>
         <div className="container">
           <button className="btn btn-danger"
             onClick={this.handleToggleContent}
