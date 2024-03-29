@@ -19,6 +19,15 @@ import { useState } from "react"
 
 export default function Count() {
     const [count, setCount] = useState(0)
+    // const [isLoading, setIsLoading] = useState(false)
+    // const [productList, setProductList] = useState([])
+
+    // const [state, setState] = useState({
+    //     count: 0,
+    //     isLoading: false,
+    //     productList: []
+    // })
+
     const handleIncrement = () => {
         console.log('logic');
         setCount(count + 1)
