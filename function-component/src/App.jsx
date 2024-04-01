@@ -2,6 +2,8 @@ import './App.css'
 import Count from './components/Count'
 import FormControl from './components/FormControl'
 import PlayList from './components/PlayList'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 /**
  * 
@@ -19,16 +21,20 @@ import PlayList from './components/PlayList'
 
 function App() {
   return (
-    <div className='container'>
-      {/* <FormControl type='text' style='danger' />
+    <>
+      <ToastContainer position='top-center' theme='colored'/>
+      <div className='container'>
+        {/* <FormControl type='text' style='danger' />
       <FormControl type='password' style='success' />
       <FormControl type='button' style='danger'>
         Login
       </FormControl> */}
 
-      {/* <Count /> */}
-      <PlayList/>
-    </div>
+        {/* <Count /> */}
+        <PlayList />
+      </div>
+    </>
+
   )
 }
 

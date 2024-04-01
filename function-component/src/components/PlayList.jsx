@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { FaTimes } from "react-icons/fa";
 import { IoMdAddCircle } from "react-icons/io";
+import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 
 export default function PlayList() {
@@ -46,6 +47,10 @@ export default function PlayList() {
             music
         ])
         setMusic('')
+        toast.success('The song has been added to playlist', {
+            position: 'top-center',
+            theme: 'dark'
+        })
     }
     // TwoWay Binding
     return (
