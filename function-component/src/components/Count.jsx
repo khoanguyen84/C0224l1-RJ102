@@ -28,10 +28,13 @@ export default function Count() {
     //     productList: []
     // })
 
-    const handleIncrement = () => {
+    const handleIncrement = (e) => {
         console.log('logic');
         setCount(count + 1)
     }
+    // const handleClick = (msg) =>{
+    //     alert(msg)
+    // }
     return (
         <>
             {
@@ -39,7 +42,9 @@ export default function Count() {
             }
             <h1>{count}</h1>
             <button className="btn btn-warning"
+                // onClick={() => handleClick('Hello anh em')}
                 onClick={handleIncrement}
+                // onClick={handleIncrement}
             >Increment</button>
         </>
     )

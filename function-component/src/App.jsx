@@ -1,6 +1,7 @@
 import './App.css'
 import Count from './components/Count'
 import FormControl from './components/FormControl'
+import PlayList from './components/PlayList'
 
 /**
  * 
@@ -25,7 +26,8 @@ function App() {
         Login
       </FormControl> */}
 
-      <Count />
+      {/* <Count /> */}
+      <PlayList/>
     </div>
   )
 }
