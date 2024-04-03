@@ -108,23 +108,39 @@ export default function ProductPage() {
                             </div>
                             <div className="row mt-2">
                                 <ul className="list-group">
-                                    <li className="list-group-item"><span className="fw-bolder">Title</span>: {productDetails?.title}</li>
-                                    <li className="list-group-item"><span className="fw-bolder">Description</span>: {productDetails?.description}</li>
-                                    <li className="list-group-item"><span className="fw-bolder">Brand</span>: {productDetails?.brand}</li>
-                                    <li className="list-group-item"><span className="fw-bolder">Price</span>: {productDetails?.price}</li>
-                                    <li className="list-group-item"><span className="fw-bolder">Discount</span>: {productDetails?.discountPercentage}%</li>
-                                    <li className="list-group-item"><span className="fw-bolder">Rating</span>: {productDetails?.rating}</li>
-                                    <li className="list-group-item"><span className="fw-bolder">Stock</span>: {productDetails?.stock}</li>
-                                    <li className="list-group-item"><span className="fw-bolder">Category</span>: {productDetails?.category}</li>
+                                    <li className="list-group-item">
+                                        <span className="fw-bolder">Title</span>: {productDetails?.title}
+                                    </li>
+                                    <li className="list-group-item">
+                                        <span className="fw-bolder">Description</span>: {productDetails?.description}
+                                    </li>
+                                    <li className="list-group-item">
+                                        <span className="fw-bolder">Brand</span>: {productDetails?.brand}
+                                    </li>
+                                    <li className="list-group-item">
+                                        <span className="fw-bolder">Price</span>: {productDetails?.price}
+                                    </li>
+                                    <li className="list-group-item">
+                                        <span className="fw-bolder">Discount</span>: {productDetails?.discountPercentage}%
+                                    </li>
+                                    <li className="list-group-item">
+                                        <span className="fw-bolder">Rating</span>: {productDetails?.rating}
+                                    </li>
+                                    <li className="list-group-item">
+                                        <span className="fw-bolder">Stock</span>: {productDetails?.stock}
+                                    </li>
+                                    <li className="list-group-item">
+                                        <span className="fw-bolder">Category</span>: {productDetails?.category}
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" 
-                                className="btn btn-sm btn-secondary d-flex align-items-center" 
+                            <button type="button"
+                                className="btn btn-sm btn-secondary d-flex align-items-center"
                                 onClick={handleHideDetailProduct}
                             >
-                                <FaTimes className="me-2"/>
+                                <FaTimes className="me-2" />
                                 Close
                             </button>
                         </div>
