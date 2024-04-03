@@ -4,6 +4,9 @@ import FormControl from './components/FormControl'
 import PlayList from './components/PlayList'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UseEffect from './components/UseEffect';
+import PostPage from './components/PostPage';
+import ProductPage from './components/ProductPage';
 
 /**
  * 
@@ -22,7 +25,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <>
-      <ToastContainer position='top-center' theme='colored'/>
+      <ToastContainer position='top-center' theme='colored' />
       <div className='container'>
         {/* <FormControl type='text' style='danger' />
       <FormControl type='password' style='success' />
@@ -31,7 +34,10 @@ function App() {
       </FormControl> */}
 
         {/* <Count /> */}
-        <PlayList />
+        {/* <PlayList /> */}
+        {/* <UseEffect /> */}
+        {/* <PostPage/> */}
+        <ProductPage/>
       </div>
     </>
 
