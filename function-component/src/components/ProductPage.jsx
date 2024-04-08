@@ -2,20 +2,28 @@ import { Modal } from "bootstrap";
 import { useEffect, useState } from "react"
 import { FaTimes } from "react-icons/fa";
 import { TbListDetails } from "react-icons/tb";
+import useFetch from "../hooks/use-fetch";
 //IIFE
 export default function ProductPage() {
-    const [categoryList, setCategoryList] = useState([])
+    // const [categoryList, setCategoryList] = useState([])
+    
+    // useEffect(() => {
+    //     async function fetchCategoryList() {
+    //         let res = await fetch('https://dummyjson.com/products/categories')
+    //         let data = await res.json()
+    //         setCategoryList(data)
+    //     }
+    //     fetchCategoryList()
+    // }, [])
+
+    const categoryList = useFetch('https://dummyjson.com/products/categories')
+
+    const data = useFetch('https://dummyjson.com/users')
+    console.log(data.users);
+
     const [selectedCategory, setSelectedCategory] = useState('smartphones')
     const [productList, setProductList] = useState([])
     const [productDetails, setProductDetails] = useState({})
-    useEffect(() => {
-        async function fetchCategoryList() {
-            let res = await fetch('https://dummyjson.com/products/categories')
-            let data = await res.json()
-            setCategoryList(data)
-        }
-        fetchCategoryList()
-    }, [])
 
     useEffect(() => {
         async function fetchProductByCategory() {
@@ -58,7 +66,7 @@ export default function ProductPage() {
                 <div className="row">
                     {
                         productList?.map((product) => (
-                            <div className="col-md-3">
+                            <div key={product.id} className="col-md-3">
                                 <div className="card">
                                     <img src={product.thumbnail} className="card-img-top" alt={product.title} />
                                     <div className="card-body">
@@ -86,7 +94,7 @@ export default function ProductPage() {
                 id="staticBackdrop"
                 data-bs-backdrop="static"
                 data-bs-keyboard="false"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="staticBackdropLabel"
                 aria-hidden="true"
             >

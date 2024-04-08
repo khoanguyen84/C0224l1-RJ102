@@ -7,6 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import UseEffect from './components/UseEffect';
 import PostPage from './components/PostPage';
 import ProductPage from './components/ProductPage';
+import { useState } from 'react';
+import useNow from './hooks/use-now';
+import Now from './components/Now';
 
 /**
  * 
@@ -23,6 +26,8 @@ import ProductPage from './components/ProductPage';
  */
 
 function App() {
+  const [toggle, setToggle] = useState(false)
+  
   return (
     <>
       <ToastContainer position='top-center' theme='colored' />
@@ -35,9 +40,13 @@ function App() {
 
         {/* <Count /> */}
         {/* <PlayList /> */}
-        {/* <UseEffect /> */}
+        {/* <button className='btn btn-sm btn-dark'
+          onClick={() => setToggle(!toggle)}
+        >Toogle</button>
+        {toggle && <UseEffect />} */}
         {/* <PostPage/> */}
-        <ProductPage/>
+        {/* <ProductPage/> */}
+        <Now/>
       </div>
     </>
 

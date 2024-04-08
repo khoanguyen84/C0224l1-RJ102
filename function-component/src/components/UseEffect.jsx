@@ -7,6 +7,8 @@
  * TH3: useEffect(callback, [deps])
  *   -> callback sẽ được thực thi khi (các) giá trị trong mảng [deps] thay đổi
  * 
+ * bên trong callback có return về 1 hàm (cleanup function). Chính hàm cleanup function tương dương với componentWillUnmounted
+ * 
  * lưu ý: Render UI trước rồi mới thực hi callback
  * Chức năng: xử lý các tình huống side-effect
  */
@@ -22,6 +24,11 @@ export default function UseEffect() {
     useEffect(() => {
         // callapi
         console.log('component did mounted and component did updated');
+
+        //cleanup function
+        return () => {
+            console.log('component wil unmouted');
+        }
     })
 
     // useEffect(() => {
