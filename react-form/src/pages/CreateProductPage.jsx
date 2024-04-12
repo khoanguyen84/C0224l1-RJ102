@@ -222,7 +222,7 @@ export default function CreateProductPage() {
                             {
                                 imageList?.map((image) => (
                                     <div key={image?.id} className="col-3 mb-2">
-                                        <img src={image?.url} alt="" />
+                                        <img src={image?.url} alt="" className="w-75"/>
                                     </div>
                                 ))
                             }
