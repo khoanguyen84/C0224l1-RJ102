@@ -1,10 +1,12 @@
 import LoginPage from "./login";
-
-export default function Panel({ theme, handleChangeTheme }) {
+/**
+ * consumer
+ */
+export default function Panel() {
     return (
-        <div className={`border border-warning p-5 ${theme}`}>
+        <div className={`border border-warning p-5`}>
             <h1>Panel</h1>
-            <LoginPage theme={theme} handleChangeTheme={handleChangeTheme} />
+            <LoginPage />
         </div>
     )
 }
